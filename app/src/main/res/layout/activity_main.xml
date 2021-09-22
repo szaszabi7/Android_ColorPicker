@@ -7,13 +7,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <SeekBar
+        android:id="@+id/red"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:progressBackgroundTint="#F00"
+        android:progressTint="#F00"
+        android:thumbTint="#F00"
+        android:max="255"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/green"
+        android:layout_below="@+id/red"
+        android:progressBackgroundTint="#0F0"
+        android:progressTint="#0F0"
+        android:thumbTint="#0F0"
+        android:max="255"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blue"
+        android:layout_below="@id/green"
+        android:progressBackgroundTint="#00F"
+        android:progressTint="#00F"
+        android:thumbTint="#00F"
+        android:max="255"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blue"
+        android:background="#FFF"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view"
+            android:text="(0,0,0)"
+            android:textColor="#000"
+            android:layout_centerInParent="true"
+            android:padding="50sp"
+            android:textSize="30sp"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
